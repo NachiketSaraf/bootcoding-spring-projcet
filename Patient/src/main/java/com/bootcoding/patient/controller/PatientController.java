@@ -19,8 +19,8 @@ public class PatientController {
     public List<Patient> getPatient(){
         return patientService.getPatient();
     }
-    @GetMapping(name/{id})
-    public Patient getPatientById(@RequestBody int id){
+    @GetMapping("name/{id}")
+    public Patient getPatientById(@PathVariable int id){
         return patientService.getPatientById(id);
     }
     @PostMapping("register")
