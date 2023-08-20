@@ -1,13 +1,12 @@
-package com.bootcoding;
+package com.bootcoding.spring.coupon;
 
-import com.bootcoding.service.CouponService;
+import com.bootcoding.spring.coupon.service.CouponService;
+import com.bootcoding.spring.coupon.service.VoucherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.security.Provider;
 
 @SpringBootApplication
 public class CouponSystemApplication implements ApplicationRunner {
@@ -17,10 +16,14 @@ public class CouponSystemApplication implements ApplicationRunner {
     }
 
     @Autowired
-	private CouponService couponService;
+    private CouponService couponService;
+
+    @Autowired
+    private VoucherService voucherService;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-		System.out.println(couponService.callCoupon());
-        System.out.println("Hello Spring");
+        String s = couponService.newCoupon();
+        System.out.println("New Coupon : " + s);
     }
 }
