@@ -16,8 +16,8 @@ public class PatientController {
     private PatientService patientService;
 
     @GetMapping("name")
-    public List<Patient> getPatient(){
-        return patientService.getPatient();
+    public List<Patient> getAllPatient(){
+        return patientService.getAllPatient();
     }
     @GetMapping("name/{id}")
     public Patient getPatientById(@PathVariable int id){
@@ -25,13 +25,11 @@ public class PatientController {
     }
     @PostMapping("register")
     public boolean registerPatient(@RequestBody Patient patients){
-        boolean isRegister = patientService.registerNewPatient(patients);
-        return isRegister;
+        return patientService.registerNewPatient(patients);;
     }
     @PostMapping("register/new")
     public boolean registerPatient(@RequestBody List<Patient> patients){
-        boolean isRegister = patientService.registerNewPatient(patients);
-        return isRegister;
+        return patientService.registerNewPatient(patients);
     }
 
 }
