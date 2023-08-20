@@ -2,14 +2,15 @@ package com.bootcoding.patient.service;
 
 import com.bootcoding.patient.model.Patient;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Service
 public class PatientService {
 
-    public List<Patient> getPatient(){
+    public List<Patient> getPPatient(){
         return patientList;
     }
 
