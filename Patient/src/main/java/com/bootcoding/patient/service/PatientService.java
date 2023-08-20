@@ -36,4 +36,7 @@ public class PatientService {
         }
         return null;
     }
+
+    public List<Patient> getAllPatient() {
+    }
 }
