@@ -1,1 +1,1 @@
-# bootcoding-spring-projcet
+# bootcoding-spring-project
