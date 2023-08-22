@@ -1,42 +1,35 @@
 package com.bootcoding.patient.service;
 
 import com.bootcoding.patient.model.Patient;
-import org.springframework.stereotype.Component;
+import com.bootcoding.patient.repository.PatientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PatientService {
 
-    public List<Patient> getPPatient(){
-        return patientList;
+    @Autowired
+    PatientRepository patientRepository;
+
+    public List<Patient> getAllPatient(){
+
+        return patientRepository.findAll();
     }
 
-    private List<Patient> patientList = new ArrayList<>();
-
-    public boolean registerNewPatient(Patient patient) {
-        patientList.add(patient);
-        return true;
+    public void savePatient(Patient patient){
+        patientRepository.save(patient);
     }
-    public boolean registerNewPatient(List<Patient> patient) {
-        for(Patient p: patient){
-            registerNewPatient(p);
+
+    public void savePatient(List<Patient> patients){
+        for(Patient patient: patients){
+            patientRepository.save(patient);
         }
-        return true;
     }
 
-
-    public Patient getPatientById(int id) {
-        for (Patient p: patientList) {
-            if(id == p.getId()){
-                return p;
-            }
-        }
-        return null;
-    }
-
-    public List<Patient> getAllPatient() {
+    public Optional<Patient> getPatientById(int id) {
+        return patientRepository.findById(id);
     }
 }
