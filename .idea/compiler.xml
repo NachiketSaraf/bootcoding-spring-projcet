@@ -7,15 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="coupon-system" />
-        <module name="Patient" />
+        <module name="coupon-system (2)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="coupon-system" target="17" />
+      <module name="Patient" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Patient" options="-parameters" />
+      <module name="Patient" options="" />
       <module name="coupon-system" options="-parameters" />
+      <module name="coupon-system (1)" options="-parameters" />
+      <module name="coupon-system (2)" options="-parameters" />
     </option>
   </component>
 </project>
