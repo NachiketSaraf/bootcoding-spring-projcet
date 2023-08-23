@@ -32,4 +32,8 @@ public class PatientService {
     public Optional<Patient> getPatientById(int id) {
         return patientRepository.findById(id);
     }
+
+    public void updatePatientById(Patient patient) {
+        patientRepository.save(patient);
+    }
 }
