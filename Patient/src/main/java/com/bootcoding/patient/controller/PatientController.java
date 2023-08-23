@@ -31,6 +31,9 @@ public class PatientController {
         return patientService.getPatientById(id);
     }
 
-
-
+//    @PutMapping("edit")
+//    public String updatePatientById(@PathVariable Patient patient){
+//        patientService.updatePatientById(patient);
+//        return "updated";
+//    }
 }
