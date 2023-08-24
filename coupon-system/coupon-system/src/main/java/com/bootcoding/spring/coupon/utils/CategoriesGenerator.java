@@ -26,7 +26,7 @@ public class CategoriesGenerator {
             "Clearance",
             "Seasonal"
     };
-    public String getCategories(){
+    public static String getCategories(){
         Random random = new Random();
         return couponCategories[random.nextInt(0,couponCategories.length-1)];
     }
