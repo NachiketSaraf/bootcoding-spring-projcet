@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/coupon-system/pom.xml" />
         <option value="$PROJECT_DIR$/Patient/pom.xml" />
+        <option value="$PROJECT_DIR$/coupon-system/coupon-system/pom.xml" />
       </list>
     </option>
   </component>
