@@ -9,21 +9,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CouponSystemApplication implements ApplicationRunner {
+public class CouponSystemApplication implements ApplicationRunner  {
 
     public static void main(String[] args) {
         SpringApplication.run(CouponSystemApplication.class, args);
     }
 
-    @Autowired
-    private CouponService couponService;
-
-    @Autowired
-    private VoucherService voucherService;
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        String s = couponService.newCoupon();
-        System.out.println("New Coupon : " + s);
+
     }
 }
