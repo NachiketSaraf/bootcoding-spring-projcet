@@ -18,7 +18,7 @@ public class CouponService {
 
     public Coupon generateNewCoupon() {
         Coupon coupon = Coupon.builder()
-                .isActive(ActiveGenerator.getCategories())
+                .isActive(ActiveGenerator.getActive())
                 .title(TitleGenerator.getTitle())
                 .createdBy(CreatedByGenerator.getCreator())
                 .createdDate(CreatedDateGenerator.createdDate())
