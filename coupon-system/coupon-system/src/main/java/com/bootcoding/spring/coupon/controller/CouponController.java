@@ -32,7 +32,7 @@ public class CouponController {
     // 1. Get All Coupons
     @GetMapping("all")
     public List<Coupon> getAllCoupons() {
-        return couponService.getNewCoupon();
+        return couponService.getAllCoupon();
     }
 
     // 2. Get Coupon Details by Coupon Id using PathVariable
