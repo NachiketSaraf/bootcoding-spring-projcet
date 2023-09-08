@@ -30,5 +30,4 @@ public class CategoriesGenerator {
         Random random = new Random();
         return couponCategories[random.nextInt(0,couponCategories.length-1)];
     }
-
 }
